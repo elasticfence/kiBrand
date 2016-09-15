@@ -7,7 +7,8 @@
     "start": "gulp dev",
     "build": "gulp build",
     "package": "gulp package",
-    "test": "gulp test"
+    "test": "gulp test",
+    "archive": "tar cfz ./latest.tar.gz --exclude .git --exclude .gitignore --exclude latest.tar.gz --exclude node_modules ./* && ls -alF latest*"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.8",
