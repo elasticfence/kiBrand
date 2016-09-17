@@ -11,7 +11,7 @@ bin/kibana plugin --install kibana-logo-hack -u https://github.com/elasticfence/
 BRAND="NULL" bin/kibana
 ```
 
-* Custom Logo (remote)
+* Custom Logo (local)
 ```
 LOGOURL="/bundles/src/ui/public/images/kibana.svg" bin/kibana
 ```
