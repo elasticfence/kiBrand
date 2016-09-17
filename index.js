@@ -1,6 +1,10 @@
 module.exports = function (kibana) {
-	
-  const brand = process.env.BRAND || "Kibana";
+
+  try {	
+     var brand = process.env.BRAND || "Kibana";
+  } catch(err){
+     var brand = "";
+  }
 
   return new kibana.Plugin({
     config(Joi) {
