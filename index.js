@@ -1,8 +1,8 @@
 module.exports = function (kibana) {
 
   var brand;
-  try {	
-     brand = process.env.BRAND || "Kibana";
+  try {
+     brand = process.env.BRAND || "";
   } catch(err){
      brand = "";
   }
@@ -23,7 +23,14 @@ module.exports = function (kibana) {
       ]
     },
     init: function (server, options) {
-	server.log(['info','status','Brand'],options.brand);
+        server.log(['info','status','Brand'],options.brand);
+        server.route({
+            path: '/brand',
+            method: 'GET',
+            handler(req, reply) {
+              reply({ brand: options.brand });
+            }
+        });
     }
   });
 };
