@@ -22,16 +22,21 @@ kibana-logo-hack.name: "NULL"
 BRAND="NULL" bin/kibana
 ```
 
-* Custom Logo (local)
+* Custom Logo __(local svg)__
 ```
 LOGOURL="/bundles/src/ui/public/images/kibana.svg" bin/kibana
 ```
-* Custom Logo (remote)
+* Custom Logo __(remote svg)__
 ```
 LOGOURL="http://127.0.0.2/some/logo.svg" bin/kibana
 ```
 
 
 
-#### Todo:
-* Add custom logo and css management
+#### FAQ
+
+* Q: I set a logo and now the brand name is gone!
+  * A: Correct. Once a logo is set, the brand will only be presented at small widths. 
+
+* Q: I installed the plugin and it caused issue X
+  * A: Please immediately open an issue on our tracker and provide full kibana error logs
