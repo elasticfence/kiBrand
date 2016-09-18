@@ -6,7 +6,7 @@ Kibana Plugin for Logo Neutralization
 --------
 #### Requirements
 
-* Kibana 4.6+
+* Kibana 4.5 
 
 
 ### Installation
