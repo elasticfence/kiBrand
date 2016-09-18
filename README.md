@@ -7,7 +7,16 @@ Kibana Plugin for Logo Neutralization
 ```
 bin/kibana plugin --install kibana-logo-hack -u https://github.com/elasticfence/kibana-logo-hack/archive/master.tar.gz
 ```
-#### Usage
+
+#### Configuration
+Add your custom branding preferences to ```config/kibana.yml``` 
+```
+kibana-logo-hack.enabled: true
+kibana-logo-hack.name: "NULL"
+# kibana-logo-hack.logourl: "http://127.0.0.2/some/logo.svg"
+
+```
+#### Runtime Usage
 * Custom Brand
 ```
 BRAND="NULL" bin/kibana
