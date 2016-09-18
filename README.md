@@ -11,7 +11,7 @@ Kibana Plugin for Logo Neutralization
 
 ### Installation
 ```
-bin/kibana plugin --install kibana-logo-hack -u https://github.com/elasticfence/kibana-logo-hack/archive/master.tar.gz
+bin/kibana plugin --install kibana-logo-hack -u https://github.com/elasticfence/kibana-logo-hack/archive/4.5.zip
 ```
 
 #### Configuration
