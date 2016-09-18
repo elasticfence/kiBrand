@@ -19,7 +19,7 @@ module.exports = function (kibana) {
       hacks: [
         'plugins/kibana-logo-hack/logo_hack'
       ],
-      injectDefaultVars(server, options) {
+      injectVars(server, options) {
 	let config = server.config();
 	return {
           brandConfig: {
