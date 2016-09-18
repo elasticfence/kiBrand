@@ -1,33 +1,21 @@
-import $ from 'jquery';
 import chrome from 'ui/chrome';
 import 'plugins/kibana-logo-hack/less/main.less';
 import uiModules from 'ui/modules';
 
-var setBrand = function(brand,url){
-        if (url){
+uiModules.get('kibana', [])
+  .config(function() {
+    let config = chrome.getInjected('brandConfig', {});
+        if (config.logourl){
                 chrome
                   .setBrand({
-                     'logo': 'url('+url+') left no-repeat',
-                     'smallLogo': 'url('+url+') left no-repeat'
+                     'logo': 'url('+config.logourl+') left no-repeat',
+                     'smallLogo': 'url('+config.logourl+') left no-repeat'
                   })
         } else {
                 chrome
                   .setBrand({
-                     'title': brand ? brand : ""
+                     'title': config.name ? config.name : ""
                   })
 
         }
-}
-
-$.getJSON( "/brand", function( data ) {
-        if (data.brand) {
-                if (data.logourl) {
-                        setBrand(data.brand,data.logourl);
-                } else {
-                        setBrand(data.brand);
-                }
-        } else {
-                setBrand("");
-        }
-});
-
+  });
