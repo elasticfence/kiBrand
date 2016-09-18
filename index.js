@@ -14,31 +14,27 @@ module.exports = function (kibana) {
   }
 
   return new kibana.Plugin({
+    id: 'kibana-logo-hack',
+    uiExports: {
+      hacks: [
+        'plugins/kibana-logo-hack/logo_hack'
+      ],
+      injectDefaultVars(server, options) {
+	let config = server.config();
+	return {
+          brandConfig: {
+            name: config.get('kibana-logo-hack.name') || brand,
+            logourl: config.get('kibana-logo-hack.logourl') || logourl
+          }
+        };
+      }
+    },
     config(Joi) {
       return Joi.object().keys({
         enabled: Joi.boolean().default(true),
 	logourl: Joi.string().default(logourl),
-        brand: Joi.string().default(brand)
+        name: Joi.string().default(brand)
       }).default();
-    },
-    uiExports: {
-      injectDefaultVars(server, options) {
-        return { brand: options.brand, logourl: options.logourl, enabled: options.enabled };
-      },
-      hacks: [
-        'plugins/kibana-logo-hack/logo_hack'
-      ]
-    },
-    init: function (server, options) {
-        server.log(['info','status','Brand'],options.brand);
-        server.route({
-            path: '/brand',
-            method: 'GET',
-            handler(req, reply) {
-              reply({ brand: options.brand, logourl: options.logourl });
-            }
-        });
     }
   });
 };
-
