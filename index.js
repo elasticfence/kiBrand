@@ -15,11 +15,7 @@ module.exports = function (kibana) {
 
   return new kibana.Plugin({
     id: 'kibana-logo-hack',
-    uiExports: {
-      hacks: [
-        'plugins/kibana-logo-hack/logo_hack'
-      ],
-      injectVars: function (server, options) {
+    injectVars: function (server, options) {
 	let config = server.config();
 	return {
           brandConfig: {
@@ -27,7 +23,11 @@ module.exports = function (kibana) {
             logourl: config.get('kibana-logo-hack.logourl') || logourl
           }
         };
-      }
+    },
+    uiExports: {
+      hacks: [
+        'plugins/kibana-logo-hack/logo_hack'
+      ]
     },
     config(Joi) {
       return Joi.object().keys({
