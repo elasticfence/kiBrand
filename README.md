@@ -1,4 +1,4 @@
-# kibana-logo-hack
+# Kibana-logo-hack
 Kibana Plugin for Logo Neutralization
 
 <img src="http://i.imgur.com/61132PJ.png" />
