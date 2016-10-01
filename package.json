@@ -1,14 +1,14 @@
 {
   "name": "kibrand",
   "version": "0.1.0",
-  "description": "Hide or Change Kibana Logo from within",
+  "description": "Kibana Branding Plugin",
   "main": "gulpfile.js",
    "scripts": {
     "start": "gulp --gulpfile __gulpfile.js dev",
     "build": "gulp --gulpfile __gulpfile.js build",
     "package": "gulp --gulpfile __gulpfile.js package",
     "test": "gulp --gulpfile __gulpfile.js test",
-    "archive": "tar cfz ./latest.tar.gz --exclude .git --exclude .gitignore --exclude latest.tar.gz --exclude node_modules ./* && ls -alF latest*"
+    "archive": "tar cfz ./kibrand-latest.tar.gz --exclude .git --exclude .gitignore --exclude kibrand-latest.tar.gz --exclude node_modules ./* && ls -alF kibrand*"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.8",
