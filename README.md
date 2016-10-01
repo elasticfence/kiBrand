@@ -1,4 +1,4 @@
-# Kibana-logo-hack
+# KiBrand
 Kibana Plugin for Logo Neutralization
 
 <img src="http://i.imgur.com/61132PJ.png" />
@@ -11,15 +11,15 @@ Kibana Plugin for Logo Neutralization
 
 ### Installation
 ```
-bin/kibana plugin --install kibana-logo-hack -u https://github.com/elasticfence/kibana-logo-hack/archive/4.5.zip
+bin/kibana plugin --install kibrand -u https://github.com/elasticfence/kibrand/archive/4.5.zip
 ```
 
 #### Configuration
 Add your custom branding preferences to ```config/kibana.yml``` 
 ```
-kibana-logo-hack.enabled: true
-kibana-logo-hack.name: "NULL"
-# kibana-logo-hack.logourl: "http://127.0.0.2/some/logo.svg"
+kibrand.enabled: true
+kibrand.name: "NULL"
+# kibrand.logourl: "http://127.0.0.2/some/logo.svg"
 
 ```
 #### Alternative Runtime Usage
@@ -36,6 +36,9 @@ LOGOURL="/bundles/src/ui/public/images/kibana.svg" bin/kibana
 ```
 LOGOURL="http://127.0.0.2/some/logo.svg" bin/kibana
 ```
+
+#### LESS Override
+Optional custom LESS rules can be added in  ```/etc/kibrand.less``` 
 
 --------
 

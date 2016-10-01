@@ -14,19 +14,19 @@ module.exports = function (kibana) {
   }
 
   return new kibana.Plugin({
-    id: 'kibana-logo-hack',
+    id: 'kibrand',
     injectVars: function (server, options) {
 	let config = server.config();
 	return {
           brandConfig: {
-            name: config.get('kibana-logo-hack.name') || brand,
-            logourl: config.get('kibana-logo-hack.logourl') || logourl
+            name: config.get('kibrand.name') || brand,
+            logourl: config.get('kibrand.logourl') || logourl
           }
         };
     },
     uiExports: {
       hacks: [
-        'plugins/kibana-logo-hack/logo_hack'
+        'plugins/kibrand/logo_hack'
       ]
     },
     config(Joi) {
