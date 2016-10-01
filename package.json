@@ -1,6 +1,6 @@
 {
   "name": "kibrand",
-  "version": "0.1.1",
+  "version": "0.4.6",
   "description": "Kibana Branding Plugin",
   "main": "gulpfile.js",
    "scripts": {
