@@ -11,7 +11,7 @@ Kibana Plugin for Logo Neutralization
 
 ### Installation
 ```
-bin/kibana plugin --install kibrand -u https://github.com/elasticfence/kibrand/archive/4.5.zip
+bin/kibana plugin --install kibrand -u https://github.com/elasticfence/kibrand/archive/0.4.5.zip
 ```
 
 #### Configuration
