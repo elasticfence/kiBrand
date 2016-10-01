@@ -12,19 +12,26 @@ module.exports = function (kibana) {
   } catch(err){
      logourl = "";
   }
+  var cssless;
+  try {
+     logourl = process.env.CSSLESS;
+  } catch(err){
+     cssless = "";
+  }
 
   return new kibana.Plugin({
-    id: 'kibana-logo-hack',
+    id: 'kibrand',
     uiExports: {
       hacks: [
-        'plugins/kibana-logo-hack/logo_hack'
+        'plugins/kibrand/logo_hack'
       ],
       injectDefaultVars(server, options) {
 	let config = server.config();
 	return {
           brandConfig: {
-            name: config.get('kibana-logo-hack.name') || brand,
-            logourl: config.get('kibana-logo-hack.logourl') || logourl
+            name: config.get('kibrand.name') || brand,
+            logourl: config.get('kibrand.logourl') || logourl,
+            cssless: config.get('kibrand.cssless') || cssless
           }
         };
       }
@@ -33,6 +40,7 @@ module.exports = function (kibana) {
       return Joi.object().keys({
         enabled: Joi.boolean().default(true),
 	logourl: Joi.string().default(logourl),
+	cssless: Joi.string().default(cssless),
         name: Joi.string().default(brand)
       }).default();
     }

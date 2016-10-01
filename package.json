@@ -1,5 +1,5 @@
 {
-  "name": "kibana-logo-hack",
+  "name": "kibrand",
   "version": "0.1.0",
   "description": "Hide or Change Kibana Logo from within",
   "main": "gulpfile.js",

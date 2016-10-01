@@ -1,5 +1,5 @@
 import chrome from 'ui/chrome';
-import 'plugins/kibana-logo-hack/less/main.less';
+import 'plugins/kibrand/less/main.less';
 import uiModules from 'ui/modules';
 
 uiModules.get('kibana', [])
