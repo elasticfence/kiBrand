@@ -14,7 +14,7 @@ module.exports = function (kibana) {
   }
   var cssless;
   try {
-     logourl = process.env.CSSLESS;
+     cssless = process.env.CSSLESS;
   } catch(err){
      cssless = "";
   }
